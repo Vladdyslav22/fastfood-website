@@ -1,2 +1,17 @@
-# fastfood-website
-Fast food website with user registration, login system and contact form built using PHP and MySQL.
+# FastFood Website
+
+Web application created using PHP and MySQL.
+
+## Technologies
+- HTML
+- CSS
+- PHP
+- MySQL
+- XAMPP
+
+## Features
+- User registration
+- User login
+- Password hashing
+- User session management
+- Contact form
