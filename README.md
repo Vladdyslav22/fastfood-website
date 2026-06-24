@@ -1,6 +1,6 @@
 # FastFood Website
 
-Web application created using PHP and MySQL.
+Web application created using HTML, CSS, PHP and MySQL.
 
 ## Technologies
 - HTML
