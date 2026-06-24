@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./sign-up.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body id="body-id">
+  <header class="header">
+    <div class="container">
+      <img src="./images/icons/logo.png" alt="Logo" class="header__logo">
+
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li><a class="pointer" id="home-id">HOME</a></li>
+          <li><a class="pointer" id="restaurants-id">RESTAURANTS</a></li>
+          <li><a class="pointer" id="offer-id">OUR OFFER</a></li>
+        </ul>
+      </nav>
+
+      <a class="sign-in" id="sign-in-id">Sign in</a>
+    </div>
+  </header>
+
+  <script>
+    $(document).ready(function () {
+      $('#sign-in-id').click(function () {
+        $('#body-id').load('sign-in.html');
+      });
+
+      $('#offer-id').click(function () {
+        $('#body-id').load('offer.html');
+      });
+
+      $('#restaurants-id').click(function () {
+        $('#body-id').load('restaurants.html');
+      });
+
+      $('#home-id').click(function () {
+        $('#body-id').load('index.html');
+      });
+    });
+  </script>
+
+  <main class="main">
+    <div class="sign-up-section">
+      <h2 class="sign-up-title">Sign Up</h2>
+      <form class="sign-up-form" id="sign-up-form-id" action="register.php" method="POST">
+        <!-- Pole na imię -->
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first_name" placeholder="Your First Name" required>
+
+        <!-- Pole na nazwisko -->
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="last_name" placeholder="Your Last Name" required>
+
+        <!-- Pole na e-mail -->
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+        <!-- Pole na numer telefonu -->
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" pattern="[0-9]{9,12}" title="Please enter a valid phone number" required>
+
+        <!-- Pole na hasło -->
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Your Password" required>
+
+        <!-- Miejsce na błędy -->
+        <div id="errorMessage"></div>
+
+        <!-- Przycisk do wysłania -->
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    // Funkcja sprawdzająca poprawność e-maila
+    document.getElementById('sign-up-form-id').addEventListener('submit', function (e) {
+      var email = document.getElementById('email').value;
+      var errorMessage = document.getElementById('errorMessage');
+      var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+      if (!emailPattern.test(email)) {
+        e.preventDefault(); // Zatrzymuje wysyłanie danych, jeśli e-mail jest niepoprawny
+        errorMessage.textContent = "Proszę wpisać poprawny adres e-mail!";
+        errorMessage.style.color = 'red';
+      } else {
+        errorMessage.textContent = "";
+      }
+    });
+  </script>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__contacts">
+        <img src="./images/icons/logo.png" alt="Logo" class="footer__logo">
+        <a class="footer__link footer__link-mail" href="mailto:fastfood_usa@gmail.com">fastfood_usa@gmail.com</a>
+        <a href="#!" class="footer__link footer__link-web">www.fastfood_usa.com</a>
+      </div>
+      <nav class="footer__nav">
+        <ul class="footer__list">
+          <li class="footer__list-title footer__menu">
+            <a class="footer__title" href="#!">Our menu</a>
+            <ul class="footer__inner-list">
+              <li class="footer__list-item"><a href="#!">Breakfast</a></li>
+              <li class="footer__list-item"><a href="#!">Lunch</a></li>
+              <li class="footer__list-item"><a href="#!">Dinner</a></li>
+            </ul>
+          </li>
+          <li class="footer__list-title footer__info">
+            <a class="footer__title" href="#!">Information</a>
+            <ul class="footer__inner-list">
+              <li class="footer__list-item"><a href="#!">About us</a></li>
+              <li class="footer__list-item"><a href="#!">Testimonial</a></li>
+              <li class="footer__list-item"><a href="#!">Event</a></li>
+            </ul>
+          </li>
+          <li class="footer__list-title footer__links">
+            <a class="footer__title" href="#!">Useful Links</a>
+            <ul class="footer__inner-list">
+              <li class="footer__list-item"><a href="#!">Services</a></li>
+              <li class="footer__list-item"><a href="#!">Support</a></li>
+              <li class="footer__list-item"><a href="#!">Conditions</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="footer__socials">
+        <p class="footer__title">Social Handles</p>
+        <div class="footer__socials-icons">
+          <a class="footer__socials-link" href="#!"><img src="./images/icons/socials/facebook.png" alt=""></a>
+          <a class="footer__socials-link" href="#!"><img src="./images/icons/socials/twitter.png" alt=""></a>
+          <a class="footer__socials-link" href="#!"><img src="./images/icons/socials/instagram.png" alt=""></a>
+          <a class="footer__socials-link" href="#!"><img src="./images/icons/socials/linkedin.png" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

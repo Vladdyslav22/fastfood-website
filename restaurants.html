@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fastfood</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body id="body-id">
+  <header class="header">
+    <div class="container">
+      <img src="./images/icons/logo.png" alt="Логотип" class="header__logo">
+
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li><a class="pointer" id="home-id">HOME</a></li>
+          <li><a class="active" id="restaurants-id">RESTAURANTS</a></li>
+          <li><a class="pointer" id="offer-id">OUR OFFER</a></li>
+        </ul>
+      </nav>
+
+      <a class="sign-in" id="sign-in-id">Sign in</a>
+    </div>
+  </header>
+
+  <script>
+    $(document).ready(function() {
+        $('#sign-in-id').click(function() {
+            $('#body-id').load('sign-in.html');
+        });
+
+        $('#offer-id').click(function() {
+            $('#body-id').load('offer.html');
+        });
+
+        $('#restaurants-id').click(function() {
+            $('#body-id').load('restaurants.html');
+        });
+
+        $('#home-id').click(function() {
+            $('#body-id').load('index.html');
+        });        
+    });
+</script>
+
+  <main class="main">
+    <section class="food-list">
+      <div class="container">
+        <div class="food-list__card">
+          <img src="./images/dairy-queen.png" alt="" class="food-list__img">
+          <div class="food-list__text-wrapper">
+            <h4 class="food-list__title">Dairy Queen</h4>
+            <p class="food-list__desc">A treat for all ages with creamy soft-serve and classic burgers that satisfy cravings.</p>
+          </div>
+        </div>
+        <div class="food-list__card">
+          <img src="./images/papa-johns.png" alt="" class="food-list__img">
+          <div class="food-list__text-wrapper">
+            <h4 class="food-list__title">Papa John’s</h4>
+            <p class="food-list__desc">Fresh dough, better ingredients, and handcrafted pizzas made to deliver the ultimate pizza experience.</p>
+          </div>
+        </div>
+        <div class="food-list__card">
+          <img src="./images/mcdonalds.png" alt="" class="food-list__img">
+          <div class="food-list__text-wrapper">
+            <h4 class="food-list__title">McDonald's</h4>
+            <p class="food-list__desc">The iconic global fast food chain known for its classic Big Mac and golden fries, delivering smiles for generations.</p>
+          </div>
+        </div>
+        <div class="food-list__card">
+          <img src="./images/kfc.png" alt="" class="food-list__img">
+          <div class="food-list__text-wrapper">
+            <h4 class="food-list__title">KFC</h4>
+            <p class="food-list__desc">Famous for its crispy fried chicken with the Colonel's secret blend of 11 herbs and spices.</p>
+          </div>
+        </div>
+        <div class="food-list__card">
+          <img src="./images/starbucks.png" alt="" class="food-list__img">
+          <div class="food-list__text-wrapper">
+            <h4 class="food-list__title">Starbucks</h4>
+            <p class="food-list__desc">More than just coffee—Starbucks serves handcrafted beverages and snacks, perfect for any moment.</p>
+          </div>
+        </div>
+        <div class="food-list__card">
+          <img src="./images/subway.png" alt="" class="food-list__img">
+          <div class="food-list__text-wrapper">
+            <h4 class="food-list__title">Subway</h4>
+            <p class="food-list__desc">Customize your perfect sandwich or wrap with fresh ingredients and a variety of delicious flavors.</p>
+          </div>
+        </div>
+        <div class="food-list__card">
+          <img src="./images/dominos.png" alt="" class="food-list__img">
+          <div class="food-list__text-wrapper">
+            <h4 class="food-list__title">Domino's Pizza</h4>
+            <p class="food-list__desc">Freshly baked pizzas with a variety of toppings and crusts, delivered hot to your door.</p>
+          </div>
+        </div>
+        <div class="food-list__card">
+          <img src="./images/burger-king.png" alt="" class="food-list__img">
+          <div class="food-list__text-wrapper">
+            <h4 class="food-list__title">Burger King</h4>
+            <p class="food-list__desc">Home of the Whopper, where flame-grilled burgers meet bold flavors and fast service.</p>
+          </div>
+        </div>
+        <div class="food-list__card">
+          <img src="./images/panda-express.png" alt="" class="food-list__img">
+          <div class="food-list__text-wrapper">
+            <h4 class="food-list__title">Panda Express</h4>
+            <p class="food-list__desc">A delicious journey through American-Chinese cuisine, famous for its Orange Chicken and chow mein.</p>
+          </div>
+        </div>
+        <div class="food-list__card">
+          <img src="./images/dunkin-donuts.png" alt="" class="food-list__img">
+          <div class="food-list__text-wrapper">
+            <h4 class="food-list__title">Dunkin' Donuts</h4>
+            <p class="food-list__desc">Start your day with a fresh coffee and a wide variety of donuts and pastries, always made fresh.</p>
+          </div>
+        </div>
+        <div class="food-list__card">
+          <img src="./images/chipotle.png" alt="" class="food-list__img">
+          <div class="food-list__text-wrapper">
+            <h4 class="food-list__title">Chipotle Mexican Grill</h4>
+            <p class="food-list__desc">Burritos, bowls, and tacos crafted with responsibly sourced ingredients and bold Mexican-inspired flavors.</p>
+          </div>
+        </div>
+        <div class="food-list__card">
+          <img src="./images/taco-bell.png" alt="" class="food-list__img">
+          <div class="food-list__text-wrapper">
+            <h4 class="food-list__title">Taco Bell</h4>
+            <p class="food-list__desc">A haven for Tex-Mex fans, serving iconic tacos, quesadillas, and creative flavor combinations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script>
+      document.querySelectorAll('.food-list__card img').forEach(img => {
+        img.addEventListener('mouseover', () => {
+            img.style.transform = 'scale(1.1)';
+            img.style.transition = 'transform 0.3s ease';
+        });
+        img.addEventListener('mouseout', () => {
+            img.style.transform = 'scale(1)';
+        });
+    });
+    </script>
+
+    <div class="gray-block">     
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__contacts">
+        <img src="./images/icons/logo.png" alt="Логотип" class="footer__logo">
+        <a class="footer__link footer__link-mail" href="mailto:fastfood_usa@gmail.com">fastfood_usa@gmail.com</a>
+        <a href="#!" class="footer__link footer__link-web">www.fastfood_usa.com</a>
+      </div>
+      <nav class="footer__nav">
+        <ul class="footer__list">
+          <li class="footer__list-title footer__menu">
+            <a class="footer__title" href="#!">Our menu</a>
+            <ul class="footer__inner-list">
+              <li class="footer__list-item"><a href="#!">Breakfast</a></li>
+              <li class="footer__list-item"><a href="#!">Lunce</a></li>
+              <li class="footer__list-item"><a href="#!">Dinner</a></li>
+            </ul>
+          </li>
+          <li class="footer__list-title footer__info">
+            <a class="footer__title" href="#!">Information</a>
+            <ul class="footer__inner-list">
+              <li class="footer__list-item"><a href="#!">About us</a></li>
+              <li class="footer__list-item"><a href="#!">Testimonial</a></li>
+              <li class="footer__list-item"><a href="#!">Event</a></li>
+            </ul>
+          </li>
+          <li class="footer__list-title footer__links">
+            <a class="footer__title" href="#!">Useful Links</a>
+            <ul class="footer__inner-list">
+              <li class="footer__list-item"><a href="#!">Services</a></li>
+              <li class="footer__list-item"><a href="#!">Support</a></li>
+              <li class="footer__list-item"><a href="#!">Conditions</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="footer__socials">
+        <p class="footer__title">Social Handles</p>
+        <div class="footer__socials-icons">
+          <a class="footer__socials-link" href="#!"><img src="./images/icons/socials/facebook.png" alt=""></a>
+          <a class="footer__socials-link" href="#!"><img src="./images/icons/socials/twitter.png" alt=""></a>
+          <a class="footer__socials-link" href="#!"><img src="./images/icons/socials/instagram.png" alt=""></a>
+          <a class="footer__socials-link" href="#!"><img src="./images/icons/socials/linkedin.png" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>  
+</main>
